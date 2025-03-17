@@ -4,124 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - FastPriv VPN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        :root {
+            --primary: #2ecc71;
+            --secondary: #3498db;
+            --dark: #1a1a1a;
+            --light: #ecf0f1;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #f0f0f0;
+            box-sizing: border-box;
         }
-        h1, h2 {
-            color: #3498db;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+            color: var(--light);
+            line-height: 1.6;
         }
-        p, ul {
-            line-height: 1.8;
-            margin-bottom: 20px;
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-        a {
-            color: #1abc9c;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        hr {
-            border: 0;
-            border-top: 2px solid #333;
-            margin: 30px 0;
-        }
-        .content {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
+
+        .header {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 15px;
+            color: white;
         }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
         h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
             font-size: 1.8rem;
-            margin-bottom: 15px;
+            position: relative;
+            padding-left: 40px;
         }
+
+        h2 i {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+
         ul {
-            list-style-type: square;
-            margin-left: 20px;
+            list-style: none;
+            margin: 1.5rem 0;
         }
+
+        ul li {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
         .footer {
             text-align: center;
-            font-size: 14px;
-            color: #bbb;
-            margin-top: 40px;
+            margin-top: 3rem;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .footer a {
-            text-decoration: underline;
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
         }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
+            .container {
+                margin: 1rem;
+                padding: 1rem;
             }
-            .content {
-                padding: 20px;
-            }
+
             h1 {
                 font-size: 2rem;
             }
+
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Privacy Policy for FastPriv VPN</h1>
-        <p><strong>Last Updated: March 17, 2025</strong></p>
+    <div class="container">
+        <div class="header">
+            <h1>FastPriv VPN Privacy Policy</h1>
+            <p>Your Security. Our Priority.</p>
+        </div>
 
-        <p>At <strong>FastPriv VPN</strong>, we are committed to protecting your privacy and ensuring the security of your data. This policy outlines how we handle the information that may be collected when you use the FastPriv VPN app.</p>
-
-        <h2>1. No User Activity Logging</h2>
-        <p>FastPriv VPN does not log or store any data related to your online activity, including:</p>
+        <h2><i class="fas fa-shield-alt"></i> 1. No User Activity Logging</h2>
+        <p>We maintain <span class="highlight">strict no-logs policy</span> ensuring:</p>
         <ul>
-            <li>IP addresses you visit.</li>
-            <li>Browsing or search history.</li>
-            <li>Any personal data related to your internet usage.</li>
-        </ul>
-        <p>We believe in fully protecting your privacy, which is why we do not track or store any information that can identify your identity or online activity.</p>
-
-        <h2>2. Advertising and Analytics</h2>
-        <p>FastPriv VPN uses external tools to display ads and collect statistics, in order to improve user experience and support the app financially. These tools include:</p>
-        <ul>
-            <li><strong>AdMob Ads:</strong> We may display ads through the <strong>Google AdMob</strong> platform. These ads use general (non-personal) data to provide relevant ads. No personal data is collected through these ads.</li>
-            <li><strong>Google Analytics:</strong> We use <strong>Google Analytics</strong> to gather general information about app usage, such as the number of users, session duration, and technical errors. This data is anonymous and cannot be used to identify you.</li>
+            <li>✅ No IP address tracking</li>
+            <li>✅ Zero browsing history storage</li>
+            <li>✅ Complete anonymity guarantee</li>
         </ul>
 
-        <h2>3. No Personal Data Collection</h2>
-        <p>FastPriv VPN does not collect or store any personal data from users, such as:</p>
+        <h2><i class="fas fa-chart-line"></i> 2. Advertising & Analytics</h2>
+        <p>Transparent integration with:</p>
         <ul>
-            <li>Names.</li>
-            <li>Email addresses.</li>
-            <li>Phone numbers.</li>
-            <li>Real IP addresses.</li>
+            <li>🔒 AdMob (Non-personalized ads)</li>
+            <li>📊 Google Analytics (Anonymous data)</li>
+            <li>🛡️ GDPR-compliant tracking</li>
         </ul>
-        <p>We do not request or store any information that can directly or indirectly identify you.</p>
 
-        <h2>4. Security and Protection</h2>
-        <p>We use strong encryption technologies to protect your internet connection and ensure your activity is not tracked. However, please note that FastPriv VPN cannot guarantee the security of data you share outside of the app (such as websites you visit).</p>
+        <h2><i class="fas fa-database"></i> 3. Data Collection Policy</h2>
+        <p>We <span class="highlight">never collect</span>:</p>
+        <ul>
+            <li>🚫 Personal identifiers</li>
+            <li>🚫 Contact information</li>
+            <li>🚫 Sensitive data</li>
+        </ul>
 
-        <h2>5. Changes to Privacy Policy</h2>
-        <p>We may update this privacy policy from time to time. You will be notified of any significant changes via the app or by email (if you provided us with one).</p>
+        <h2><i class="fas fa-lock"></i> 4. Security Measures</h2>
+        <ul>
+            <li>🔐 Military-grade encryption</li>
+            <li>🌐 Global server network</li>
+            <li>🔄 Automatic kill switch</li>
+        </ul>
 
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions or concerns regarding our privacy policy, please contact us at: <a href="mailto:smctaher@gmail.com">smctaher@gmail.com</a>.</p>
+        <h2><i class="fas fa-sync-alt"></i> 5. Policy Updates</h2>
+        <p>Stay informed about changes through:</p>
+        <ul>
+            <li>📧 Email notifications</li>
+            <li>🔔 In-app alerts</li>
+            <li>📅 Version history tracking</li>
+        </ul>
 
-        <hr>
+        <h2><i class="fas fa-envelope"></i> 6. Contact Us</h2>
+        <p>Reach our privacy team at:<br>
+        <a href="mailto:smctaher@gmail.com" class="contact-link">
+            <i class="fas fa-paper-plane"></i> smctaher@gmail.com
+        </a></p>
 
-        <p class="footer"><strong>Thank you for trusting FastPriv VPN!</strong><br>We are committed to providing a secure and private experience for all our users.</p>
+        <div class="footer">
+            <p>© 2025 FastPriv VPN. All rights reserved.<br>
+            Protecting your digital freedom since 2025</p>
+        </div>
     </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
